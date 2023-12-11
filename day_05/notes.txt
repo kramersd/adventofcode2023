@@ -1,0 +1,68 @@
+
+
+seeds to be planted
+1, 2, 3
+
+maps
+    convert from SOURCE category to DESTINATION category
+
+    seed-to-soil-map
+        convert a seed (SOURCE) to soil (DESTINATION)
+        
+    Each line in a map contains 3 numbers
+        DESTINATION range start, SOURCE range start, range length
+    
+    seed-to-soil-map
+        50 98 02
+        52 50 48
+    
+        50 = DESTINATION range start
+        92 = SOURCE range start
+        02 = range length
+
+        SOURCE      starts at 98, has range of 2, = [98, 99]
+        DESTINATION starts at 50, has range of 2, = [50, 51]
+
+        With this
+            seed 98 corresponds to soil 50
+            seed 99 corresponds to soil 51
+
+ANY SOURCE THAT ISN'T MAPPED, CORRESPONDS TO SAME NUMBER IN DESTINATION (ie, 10 = 10)
+
+
+41,218,238 + 421,491,713
+
+
+
+79 + 14 = 93
+79 - 92
+
+MAPPING SEED to SOIL
+    Input 79 - 92
+
+    For rule in Map:
+        2 rules
+        1. Doesn't apply
+        2. Does apply AND all numbers fall in range
+            52 50 48
+
+    Output of SOIL
+        81 - 94
+
+MAPPING SOIL to FERT
+    Input 81 to 94
+    
+    For rule in Map:
+        3 rules
+        1. Doesn't apply
+        2. Does apply, only 2 numbers fall in range [52, 53]
+        3. Doesn't apply
+
+
+
+
+---------- Transformed Seed properties ----------
+{'seed': 79, 'soil': 81, 'fertilizer': 81, 'water': 81, 'light': 74, 'temperature': 78, 'humidity': 78, 'location': 82}
+{'seed': 92, 'soil': 94, 'fertilizer': 94, 'water': 94, 'light': 87, 'temperature': 55, 'humidity': 56, 'location': 60}
+{'seed': 55, 'soil': 57, 'fertilizer': 57, 'water': 53, 'light': 46, 'temperature': 82, 'humidity': 82, 'location': 86}
+{'seed': 67, 'soil': 69, 'fertilizer': 69, 'water': 69, 'light': 62, 'temperature': 98, 'humidity': 98, 'location': 98}
